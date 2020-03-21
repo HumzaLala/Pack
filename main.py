@@ -2,7 +2,6 @@ from hackClubAPI import HackClubAPI
 from github import Github
 from os import environ
 from flask import Flask, jsonify, request
-from pysnooper import snoop
 from mattermost import Mattermost
 
 # Constants
@@ -27,7 +26,6 @@ def index():
 
 
 @app.route("/submit", methods=["POST"])
-@snoop()
 def submit():
     if request.method == "POST" and request.is_json == True:
         data = request.json
