@@ -5,6 +5,7 @@ import http.client, json
 # eg, "chat.srnd.org"
 # webHookKey should be the key trailing /hooks/
 
+
 class Mattermost:
     def __init__(self, serverUrl, webHookKey):
         self.serverUrl = serverUrl
